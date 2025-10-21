@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": "cucumber-js",
+  "test": "npx cucumber-js --format json:reports/cucumber-report.json",
   "report": "node ./report-generator.js"
-},
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
