@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": "npx cucumber-js --format json:reports/cucumber-report.json",
-  "report": "node ./report-generator.js"
-  },
+  "test": "cucumber-js --require-module ts-node/register --require ./tests/UI_Test/steps/**/*.ts --format json:reports/cucumber_report.json",
+  "report": "node generate-report.js",
+  "test:report": "npm run test && npm run report"  
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,7 +17,9 @@
     "@types/node": "^24.6.2",
     "cucumber-html-reporter": "^7.2.0",
     "multiple-cucumber-html-reporter": "^3.9.3",
-    "playwright": "^1.56.0",
-    "playwright-bdd": "^8.4.1"
+    "playwright": "^1.56.1",
+    "playwright-bdd": "^8.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }
